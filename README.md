@@ -12,8 +12,21 @@ This repo is for my Python Live Project that I did with The Tech Academy
 - [Scrape Recipes](#scrape-recipes)
 - [Other](#other)
 
+## Story 1: Create the Basic App
+- Create the basic Django App and register in main project settings.py
+- Create the base, home, and navbar templates
+- Create functions to render all templates in views.py
+- Register all urls
+- Apply basic styling to base and homepage templates
+
 ## Create Recipes
 ![Add Recipe](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/Add%20Recipe%201.gif)
+## Story 2: Create the Collection Model
+- Create Recipe model with all applicable categories
+- Create a model form that includes all applicable inputs required from user
+- Create Add Recipe Template and register url
+- Add views function to render the create page that utilizes the model form to save item to database
+- Add basic styling to template 
 ### Code
 - [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_add_recipe.html)
 - [Form](https://github.com/sseyler0119/Python-Live-Project/blob/main/forms.py)
