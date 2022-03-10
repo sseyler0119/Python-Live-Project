@@ -1,0 +1,328 @@
+/************************************************
+    CSS BOOTSTRAP OVERRIDE STYLE SHEET
+**************************************************/
+
+#Page_Container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #afc9d1 !important;
+}
+
+/* general card styling */
+.dessert_card_outer {
+    margin: 20px 10px !important;
+    border-radius: 9px !important;
+    border: none !important;
+}
+
+.dessert_body {
+    font-family: 'Karla', sans-serif !important;
+    line-height: 1.42857143 !important;
+    font-size: 1.25rem;
+}
+
+.dessert_p {
+    font-family: 'Karla', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 15px;
+    line-height: 30px !important;
+    padding-bottom: 15px;
+}
+
+.dessert_h3 {
+    font-family: 'Karla', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 1.55rem;
+    line-height: 30px !important;
+    letter-spacing: 2pt !important;
+    text-align: center !important;
+    color: #e0f2f6 !important;
+    padding: 1rem 6.25rem !important;
+}
+
+/* ======================== HOME page styling ==================================== */
+
+.jumbo_dessert {
+    background-color: #a29998 !important;
+    color: #381c2b !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+}
+
+.dessert_title {
+    font-variant: small-caps !important;
+    letter-spacing: 2pt !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    font-size: 65px !important;
+    padding: 1rem 6.25rem !important;
+}
+
+.dessert_title_img {
+    border-radius: 10px !important;
+}
+
+
+/* Navbar Formatting */
+.dessert_navbar_link {
+    font-family: 'Karla', sans-serif !important;
+    color: #5f92a3 !important;
+    text-align: left !important;
+    padding: 14px 18px 14px 0 !important;
+    font-size: 20px !important;
+    letter-spacing: 1.5pt !important;
+    font-weight: 600 !important;
+}
+
+.dessert_navbar_link:hover {
+    color: #C6DE41 !important;
+    font-weight: 700 !important;
+}
+
+.card_heading a {
+      text-decoration: none !important;
+      color: #C6DE41 !important;
+      font-weight: 600 !important;
+}
+
+/* formatting to adjust vertical line space for textfields */
+.vertSpace {
+    line-height: 200%;
+}
+
+/* ======================== Template title images ==========================================*/
+
+.photo {
+    filter:grayscale(25%);
+    position: relative !important;
+    line-height: 0 !important;
+    margin-bottom: 10px !important;
+    overflow: hidden !important;
+    border-radius: 9px !important;
+    padding: 1px !important;
+}
+
+.photo-container {
+    text-align: center !important;
+    margin:  auto !important;
+}
+
+.photo-container img {
+    max-width: 100% !important;
+}
+
+.photo-overlay {
+    color: #E1E8EB !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    padding-top: 385px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.photo_overlay_title {
+    font-variant: small-caps !important;
+    letter-spacing: 2pt !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    font-size: 85px !important;
+    color: #e0f2f6 !important;
+    background-color: rgba(162, 153, 152, 0.5) !important;
+    padding-bottom: 25px !important;
+}
+/* ============================ Recipe Search Page Styling =========================*/
+.outer_search_container {
+    background-color: #a29998 !important;
+    color: #381c2b !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    padding: 0px !important;
+}
+
+.searchPg_photo_overlay {
+    color: #E1E8EB !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    padding-top: 345px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.searchPg_overlay_title {
+    font-variant: small-caps !important;
+    letter-spacing: 2pt !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    font-size: 75px !important;
+    color: #e0f2f6 !important;
+    background-color: rgba(162, 153, 152, 0.5) !important;
+    padding-bottom: 25px !important;
+    margin: 0px 2px !important;
+}
+
+.search_form {
+    width: 50% !important;
+}
+
+.search_row {
+    margin: 3px 0px !important;
+    text-align: center !important;
+}
+
+.search_card {
+    width: 19rem !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+/* ================================= Button Styling ========================================================*/
+
+.dessert_button1 {
+    background-color: #373634 !important;
+    border: none !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    letter-spacing: 2pt !important;
+}
+
+.dessert_buttons {
+    background-color: #a29998 !important;
+    border: none !important;
+    margin: 0 10px !important;
+    padding: 5px 20px !important;
+    font-size: 18px !important;
+
+}
+/*
+.dessert_buttons:hover {
+    background-color: #8d476c !important;
+    border: none !important;
+    margin: 0px 10px !important;
+    padding: 5px 20px !important;
+    font-size: 18px !important;
+}
+*/
+
+.cancel_button {
+    background-color: #afc9d1 !important;
+    color: black !important;
+    border: none !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    font-size: 18px !important;
+}
+
+.cancel_button:hover {
+    background-color: #bbb2a7 !important;
+    color: black !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    font-size: 20px !important;
+}
+
+.delete_button {
+    background-color: #8d476c !important;
+    color:  #e0f2f6 !important;
+    border: none !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    font-size: 18px !important;
+}
+
+.delete_button:hover {
+    background-color: #afc9d1  !important;
+    color:  #8d476c !important;
+    border: none !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    font-size: 20px !important;
+}
+
+.search_button {
+    background-color: #8d476c !important;
+    color:  #e0f2f6 !important;
+    border: none !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    font-size: 20px !important;
+}
+
+.search_button:hover {
+    background-color: #afc9d1  !important;
+    color:  #8d476c !important;
+    border: none !important;
+    padding: 5px 20px !important;
+    margin: 20px auto !important;
+    font-size: 22px !important;
+}
+
+/*========================== Recipe Card Styling =======================================*/
+
+
+.dessert_recipe_card_top {
+    background-color: #a29998 !important;
+}
+
+.dessert_recipe_body {
+    border: 1px solid #a29998 !important;
+}
+
+/*========================== Modal Styling =======================================*/
+
+.dessert_modal_header h5 {
+    color:  #8d476c !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+}
+
+.dessert_modal_body p {
+    color:  #8d476c !important;
+    font-size: 26px !important;
+    font-weight: 500 !important;
+}
+
+.dessert_modal_f {
+    text-align: center !important;
+}
+
+/*================================= Table Styling ==================================*/
+
+.table_headings th {
+    font-family: 'Karla', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.55rem;
+    line-height: 30px !important;
+    font-size: 20px !important;
+    letter-spacing: 1.2pt !important;
+    text-align: left !important;
+    color: #090a0a !important;
+}
+
+.table_body {
+    font-family: 'Karla', sans-serif !important;
+    font-weight: 500 !important;
+    line-height: 30px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    color: #090a0a !important;
+}
+
+.table_body .table_hyperlink {
+    font-family: 'Karla', sans-serif !important;
+    font-weight: 600 !important;
+    line-height: 30px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    color: #5f92a3 !important;
+}
+
+.table_body .table_hyperlink:hover {
+    text-decoration: none !important;
+    color: #C6DE41 !important;
+    font-weight: 600 !important;
+}

@@ -1,0 +1,44 @@
+<!-- This page displays results obtained from 'spoonforkbacon.com/category/dessert-recipes/'for the Desserts App -->
+
+{% extends "Desserts/desserts_base.html" %}
+
+{% load static %}
+
+{% block title %}Spoon Fork Bacon{% endblock %}
+
+{% block content %}
+<div class="card mb-3 dessert_card_outer">
+     <div class="photo-container">
+            <div class="photo">
+                <img src="/static/images/dessert1.jpg" class="card-img" alt="tea time cakes and cookies">
+                <div class="photo-overlay">
+                     <h3 class="photo_overlay_title">Spoon Fork Bacon Recipes</h3>
+                </div>
+            </div>
+        </div>
+
+
+  <div class="card-body">
+    <h5 class="card-text card_heading">Visit <a class="text-info" href="https://www.spoonforkbacon.com/">Spoon Fork Bacon</a> for more excellent recipes!</h5>
+    <table class="table my-4">
+        <thead class="table_headings"> <!-- table headings -->
+            <tr class="text-muted">
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody class="table_body"> <!-- table rows, display data from zipped_list -->
+        {% for names, descriptions, recipe_urls in zipped_list %}
+            <tr>
+                <td><a class="text-info table_hyperlink" href="{{ recipe_urls }}"> {{ names }}</a></td>
+                <td> {{ descriptions }} <a class="text-info table_hyperlink" href="{{ recipe_urls }}">Read More </a> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+{% endblock %}

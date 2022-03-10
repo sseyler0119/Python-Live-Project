@@ -1,0 +1,12 @@
+<!-- navbar section -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav dessert_navbar">
+          <a class="dessert_navbar_link nav-link" href="{% url 'desserts_home' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="dessert_navbar_link nav-link" href="{% url 'desserts_displayDb' %}">View Recipes</a>
+          <a class="dessert_navbar_link nav-link" href="{% url 'desserts_add' %}">Add New Recipe</a>
+          <a class="dessert_navbar_link nav-link" href="{% url 'desserts_bs' %}">Spoon Fork Bacon</a>
+          <a class="dessert_navbar_link nav-link" href="{% url 'desserts_category_search' %}">Recipe Search</a>
+      </div>
+    </div>
+</nav>

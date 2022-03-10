@@ -1,0 +1,61 @@
+<!-- This page is to delete a recipe from the database -->
+
+{% extends "Desserts/desserts_base.html" %}
+{% load static %}
+
+{% comment %}
+    This page is to delete a recipe from the database
+    When the user clicks the delete button from the Details page they are brought to a delete page
+    where they must confirm if they want to delete the recipe from the database
+{% endcomment %}
+
+{% block title %}Delete Recipe {% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid jumbo_dessert bg-white text-info">
+    <div class="container jumbo_dessert">
+        <h1 class="display-4 dessert_title">Delete Recipe</h1>
+        <h3 class="lead dessert_h3">Click button to delete recipe.</h3>
+
+        <!-- Button to trigger Delete Confirmation modal -->
+        <button type="button" class="btn btn-info dessert_button1" data-toggle="modal" data-target="#confirmDeleteModal">
+            Delete
+        </button>
+    </div> <!-- end container -->
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ item.as_p }}
+
+        <!-- Modal -->
+        <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header dessert_modal_header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm Delete </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div> <!-- end modal-header container -->
+
+                <!-- Delete Confirmation Modal body Content -->
+              <div class="modal-body dessert_modal_body">
+                  <p>Warning, you are about to delete the recipe from the database!</p>
+                  <p>Would you like to continue?</p>
+              </div> <!-- end modal-body content -->
+
+              <div class="modal-footer dessert_modal_f"> <!-- modal-footer -->
+                  <!-- Option 1: cancel, return to View Recipes -->
+                  <a href="{% url 'desserts_displayDb' %}">
+                      <button type="button" class="btn btn-secondary cancel_button" >Cancel</button>
+                  </a>
+                  <!-- Option 2: Save changes, delete from recipes -->
+                  <button type="submit" class="btn btn-info delete_button">Delete Recipe</button>
+              </div> <!-- end modal-footer -->
+            </div> <!-- end modal-content container -->
+          </div> <!-- end modal-dialog container -->
+        </div><!-- end modal-fade container -->
+    </form> <!-- end form -->
+</div> <!-- end jumbotron container -->
+
+{% endblock %}

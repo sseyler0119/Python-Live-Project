@@ -1,0 +1,44 @@
+<!-- This is the display database page for the Desserts App -->
+
+{% extends "Desserts/desserts_base.html" %}
+
+{% load static %}
+
+{% block title %} View Recipes {% endblock %}
+
+{% block content %}
+
+<div class="card mb-3 dessert_card_outer">
+     <div class="photo-container">
+            <div class="photo">
+                <img src="/static/images/dessert2a.jpg" class="card-img" alt="tea time cakes and cookies">
+                <div class="photo-overlay">
+                     <h3 class="photo_overlay_title">Recipes</h3>
+                </div>
+            </div>
+        </div>
+
+  <div class="card-body">
+<!--    <h1 class="card-title text-info">Recipes</h1>-->
+    <table class="table">
+        <thead class="table_headings"> <!-- table headings -->
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody class="table_body"> <!-- table rows -->
+          {% for item in recipe_db %} <!-- iterate through database, output results to table -->
+            <tr>
+              <td> {{ item.category }}</td>
+                <!-- link recipe name to recipe details based on primary key associated with item "item.id" -->
+              <td> <a class="text-info table_hyperlink" href="{% url 'desserts_details' item.id %}">{{ item.name }}</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </div>
+</div>
+<!--<img src ="/static/images/dessert2.jpg" class="img-fluid cardImg" alt="mini fruit tarts">-->
+
+{% endblock %}

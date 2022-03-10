@@ -1,0 +1,19 @@
+<!-- This is the home page for the Desserts App -->
+
+{% extends "Desserts/desserts_base.html" %}
+
+{% load static %}
+
+{% block title %} Desserts {% endblock %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid jumbo_dessert">
+  <div class="container">
+    <h1 class="dessert_title">Craving something comforting and sweet?</h1>
+    <h3 class="dessert_h3">You've come to the right place! Check out our recipes for Cakes, Cupcakes, Cookies, Pies, Bars, and more!</h3>
+  </div>
+</div>
+<img src="/static/images/happiness.jpg" class="img-fluid dessert_title_img" alt="Happiness is a piece of cake">
+
+{% endblock %}

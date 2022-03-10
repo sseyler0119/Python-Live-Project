@@ -1,0 +1,24 @@
+<!-- This page is to add a new recipe to the Desserts App -->
+
+{% extends "Desserts/desserts_base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Add New Recipe {% endblock %}
+
+{% block header %} Add New Recipe to Database {% endblock %}
+
+{% block content %}
+    <div id="form-container" class="form-group form-centered w-50 mx-auto">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col">
+                    {{ form|crispy }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info px-3 my-4 dessert_buttons">Add Recipe</button>
+        </form>
+    </div>
+
+
+{% endblock %}

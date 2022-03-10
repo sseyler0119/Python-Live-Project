@@ -1,0 +1,41 @@
+<!-- This is the details page for the Desserts App -->
+
+{% extends "Desserts/desserts_base.html" %}
+{% load static %}
+
+{% comment %}
+  This is the details page for the Desserts App. When a user clicks on a chosen recipe name
+  from the desserts_displayDb.html page, this code pulls up the recipe details for that recipe
+  and displays the output on the desserts_details.html webpage
+{% endcomment %}
+
+
+{% block title %} Recipe Details {% endblock %}
+
+{% block content %}
+
+<!-- Recipe Card -->
+<div class="card pb-3">
+      <div class="card-header text-white dessert_recipe_card_top">
+           <h5 class="card-title">{{ details.name }}</h5> <!-- recipe name -->
+           <p class="card-text">Category: {{ details.category }}</p>
+      </div>
+
+      <div class="card-body ">
+            <h6 class="font-weight-bold"> Ingredients: </h6>
+            <p class="card-text"> {{ details.ingredients|linebreaks }}</p>
+            <h6 class="font-weight-bold"> Method: </h6>
+            <ul class="list-group my-3">
+                <li class="list-group-item dessert_recipe_body vertSpace">{{ details.method|linebreaks }}</li>
+            </ul>
+            <p class="card-text"><small class="text-muted">Servings: {{ details.servings }} </small></p>
+            <a href="{% url 'desserts_edit' details.pk %}">
+                <button type="submit" class="btn btn-info px-3 my-4 dessert_buttons">Edit Recipe</button>
+            </a>
+            <a href="{% url 'desserts_delete' details.pk %}">
+                <button type="submit" class="btn btn-info px-3 my-4 dessert_buttons">Delete Recipe</button>
+            </a>
+      </div>
+</div>
+
+{% endblock %}

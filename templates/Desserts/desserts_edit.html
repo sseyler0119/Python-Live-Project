@@ -1,0 +1,30 @@
+<!-- This page is to edit a recipe to the Desserts App -->
+
+{% extends "Desserts/desserts_base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% comment %}
+    This page is to edit a recipe for the Desserts App
+    When the user clicks the edit button from the Details page they are brought to a form
+    where they can edit the content of the recipe and save it back to the database
+{% endcomment %}
+
+{% block title %}Edit Recipe {% endblock %}
+
+{% block header %}Edit Recipe {% endblock %}
+
+{% block content %}
+    <div id="form-container" class="form-group form-centered w-50 mx-auto">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col">
+                    {{ form|crispy }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info px-3 my-4 dessert_buttons">Save Recipe</button>
+        </form>
+    </div>
+
+{% endblock %}
