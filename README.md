@@ -45,6 +45,15 @@ def add_recipe(request):
 ```
 ## Display Recipes
 ![Display Recipes](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/Display%20Database%20and%20Details.gif)
+## Story 3: Display all Items from Database
+- Create Display Recipe database template and register url
+- Add views function that gets all items from the database and displays the results on rendered template with appropriate labels/headers
+- Add basic styling to template
+## Story 4: Details Page
+- Create a Recipe Details template and register url
+- Create a views function that will find a single item from the database and render the details on the Details Page template
+- Add in a link for each item on the Display Recipes page that points to the details page for that item
+- Add basic styling to template
 ### Code
 - [Display Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_displayDb.html)
 - [Display Details Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_details.html)
