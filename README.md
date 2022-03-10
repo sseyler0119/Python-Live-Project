@@ -12,21 +12,20 @@ This repo is for my Python Live Project that I did with The Tech Academy
 - [Scrape Recipes](#scrape-recipes)
 - [Other](#other)
 
-## Story 1: Create the Basic App
+## Create the Basic App
 - Create the basic Django App and register in main project settings.py
 - Create the base, home, and navbar templates
 - Create functions to render all templates in views.py
 - Register all urls
-- Apply basic styling to base and homepage templates
+- Apply basic styling to base and homepage templates using Bootstrap and CSS
 
 ## Create Recipes
 ![Add Recipe](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/Add%20Recipe%201.gif)
-## Story 2: Create the Collection Model
 - Create Recipe model with all applicable categories
 - Create a model form that includes all applicable inputs required from user
 - Create Add Recipe Template and register url
 - Add views function to render the create page that utilizes the model form to save item to database
-- Add basic styling to template 
+- Add basic styling to template using Bootstrap, CSS, and Crispy Forms
 ### Code
 - [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_add_recipe.html)
 - [Form](https://github.com/sseyler0119/Python-Live-Project/blob/main/forms.py)
@@ -45,15 +44,14 @@ def add_recipe(request):
 ```
 ## Display Recipes
 ![Display Recipes](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/Display%20Database%20and%20Details.gif)
-## Story 3: Display all Items from Database
+### Part 1: Display Recipe Database
 - Create Display Recipe database template and register url
 - Add views function that gets all items from the database and displays the results on rendered template with appropriate labels/headers
-- Add basic styling to template
-## Story 4: Details Page
 - Create a Recipe Details template and register url
+### Part 2: Display Recipe Details
 - Create a views function that will find a single item from the database and render the details on the Details Page template
 - Add in a link for each item on the Display Recipes page that points to the details page for that item
-- Add basic styling to template
+- Add basic styling to both templates using Bootstrap and CSS
 ### Code
 - [Display Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_displayDb.html)
 - [Display Details Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_details.html)
@@ -76,6 +74,9 @@ def recipe_details(request, pk):
 ```
 ## Update Recipes
 ![Edit Recipe](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/edit%20demo.gif)
+- Create Edit Recipe page to templates and register url
+- Create edit_recipe function that displays the content from a single item in the database and allows the user to modify the existing content using model forms and instances, and then saves the recipe back to the database
+- Add basic styling using Bootstrap, CSS, and Crispy Forms
 ### Code
 - [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_edit.html)
 - View:
@@ -96,6 +97,10 @@ def edit_recipe(request, pk):
  
  ## Delete Recipes
 ![Delete Recipe](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/Delete%20Demo.gif)
+- Create Delete Recipe page to templates and register url
+- Create delete_recipe function that deletes a single item in the database and saves the changes back to the database 
+- Create a modal in the Delete Recipe template that presents the user with a delete confirmation before the item is permanently removed from the database
+- Add basic styling using Bootstrap and CSS
 ### Code
 - [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_delete.html)
 - View:
