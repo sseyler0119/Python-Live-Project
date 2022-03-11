@@ -1,5 +1,8 @@
 # Python-Live-Project
-This repo is for my Python Live Project that I did with The Tech Academy
+This repo is for my Python Live Project that I did as a student with The Tech Academy. Over the course of a two-week code sprint, I worked on a development team of other students where we were each tasked with creating a database-focused web app within the Django framework. For my app, I chose to create a recipe app that primarily tracked desserts.  
+
+I was assigned the task of creating a website that would allow a user to view all available recipes within a database and view the details of any specific recipe of their choosing.
+Additionally, the user should be able to create new recipes, edit existing recipes, and delete recipes in a database. I also implemented other features including a search page that searches by category using an API and displays the results to the user, and a recipe scraper page that scrapes content from a chosen recipe site using the Beautiful Soup library and then displays those results to the user.
 
 ## Overview
 
@@ -9,7 +12,7 @@ This repo is for my Python Live Project that I did with The Tech Academy
 - [Delete Recipes](#delete-recipes)
 - [Scrape Recipes](#scrape-recipes)
 - [Search For Recipes](#search-for-recipes)
-- [Other](#other)
+- [Conclusion](#conclusion)
 
 ## Create the Basic App
 - Create the basic Django App and register in main project settings.py
@@ -202,7 +205,18 @@ def category_search(request):
         context = {'form': form, 'results_list': results_list}  # package form and results_list in context
     return render(request, 'Desserts/desserts_category_search.html', context)
  ```
- 
-## Other
-- [Static Files](https://github.com/sseyler0119/Python-Live-Project/tree/main/static)
-- [URLs](https://github.com/sseyler0119/Python-Live-Project/blob/main/urls.py)
+## Conclusion 
+Over the course of this project, I increased my knowledge and gained new coding and noncoding skills. I learned what it's like to work on a developer team in a professional setting. 
+
+Some of the new coding skills I developed during this project are:
+- Effectively using the Beautiful Soup library to parse data and navigate the website’s data structure for web-scraping
+- Utilizing API endpoints, Requests library, and JSON to 
+
+Some of the non-coding related skills that I developed are:
+- Using Agile and Scrum methodologies:
+    - Attended a sprint planning session where we discussed what the project expectations were and how we would accomplish those expectations
+    - Attended daily standups where we discussed what we each worked on previously, what out workplans for the day were, and any roadblocks that we had that were impeding progress
+    - Attending weekly coding retrospectives where we discussed what was helpful and what was detrimental to productivity and team workflow
+
+- Using Azure DevOps to manage workflow and repos
+- Effectively using version control to make commits, merges, push/pulls while being mindful of minimizing merge conflicts
