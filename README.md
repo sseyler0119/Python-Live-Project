@@ -3,13 +3,12 @@ This repo is for my Python Live Project that I did with The Tech Academy
 
 ## Overview
 
-
 - [Create Recipes](#create-recipes)
 - [Display Recipes](#display-recipes)
 - [Update Recipes](#update-recipes)
 - [Delete Recipes](#delete-recipes)
-- [Search For Recipes](#search-for-recipes)
 - [Scrape Recipes](#scrape-recipes)
+- [Search For Recipes](#search-for-recipes)
 - [Other](#other)
 
 ## Create the Basic App
@@ -119,6 +118,46 @@ def delete_recipe(request, pk):
     return render(request, 'Desserts/desserts_delete.html', content)
 ```
 
+## Scrape Recipes
+![Web Scraping](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/BeautifulSoupDemo.gif)
+- Create template to display information scraped from [Spoon Fork Bacon](https://www.spoonforkbacon.com/), register url
+- Create scrape_desserts function to scrape data from source site using Beautiful Soup and Requests libraries
+    - Use Beautiful Soup to parse HTML content then iterate through specified elements to extract chosen content (name, description, and recipe url)
+    - Append extracted data to corresponding lists, zip all lists together into dictionary
+    - Bind dictionary to context, send to rendered web scraping template
+- Display all objects extracted in table on rendered template
+    - Create clickable links for each recipe that lead to details page on source site
+- Add basic styling using Bootstrap and CSS
+
+### Code
+- [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_bs.html)
+- [Scraping Source](https://www.spoonforkbacon.com/category/dessert-recipes/)
+- View:
+```cs
+# scrape recipe data from external recipe page, package up and send to template to be rendered
+def scrape_desserts(request):
+    names = []  # recipe name list
+    descriptions = []  # recipe description list
+    recipe_urls = []  # recipe_url list
+    url = 'https://www.spoonforkbacon.com/category/dessert-recipes/'  # page to scrape data from
+    page = requests.get(url)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    parental_soup = soup.find_all('article', class_="category-dessert-recipes")  # parent to search
+
+    for i in parental_soup:  # iterate through parental_soup through each article tag
+        name = i.h2.a.text  # extract text from h2 hyperlink text as recipe name
+        description = i.div.p.text  # extract text from first paragraph tag in the div inside parental soup
+        recipe_url = i.find('a')['href']  # extract recipe urls
+        names.append(name)  # append name to names list
+        descriptions.append(description)  # append description to descriptions list
+        recipe_urls.append(recipe_url)  # append recipe urls to recipe_urls list
+
+    zipped_list = zip(names, descriptions, recipe_urls) # zip all extracted lists together
+    context = {'zipped_list': zipped_list} # bind zipped_list dictionary to context
+
+    return render(request, 'Desserts/desserts_bs.html', context)
+ ```
+
 ## Search For Recipes
 ![Search GIF](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/APIdemo1.gif)
 ### Code
@@ -152,36 +191,6 @@ def category_search(request):
     return render(request, 'Desserts/desserts_category_search.html', context)
  ```
  
-## Scrape Recipes
-![Web Scraping](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/BeautifulSoupDemo.gif)
-### Code
-- [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_bs.html)
-- [Scraping Source](https://www.spoonforkbacon.com/category/dessert-recipes/)
-- View:
-```cs
-# scrape recipe data from external recipe page, package up and send to template to be rendered
-def scrape_desserts(request):
-    names = []  # recipe name list
-    descriptions = []  # recipe description list
-    recipe_urls = []  # recipe_url list
-    url = 'https://www.spoonforkbacon.com/category/dessert-recipes/'  # page to scrape data from
-    page = requests.get(url)
-    soup = BeautifulSoup(page.content, 'html.parser')
-    parental_soup = soup.find_all('article', class_="category-dessert-recipes")  # parent to search
-
-    for i in parental_soup:  # iterate through parental_soup through each article tag
-        name = i.h2.a.text  # extract text from h2 hyperlink text as recipe name
-        description = i.div.p.text  # extract text from first paragraph tag in the div inside parental soup
-        recipe_url = i.find('a')['href']  # extract recipe urls
-        names.append(name)  # append name to names list
-        descriptions.append(description)  # append description to descriptions list
-        recipe_urls.append(recipe_url)  # append recipe urls to recipe_urls list
-
-    zipped_list = zip(names, descriptions, recipe_urls) # zip all extracted lists together
-    context = {'zipped_list': zipped_list} # bind zipped_list dictionary to context
-
-    return render(request, 'Desserts/desserts_bs.html', context)
- ```
 ## Other
 - [Static Files](https://github.com/sseyler0119/Python-Live-Project/tree/main/static)
 - [URLs](https://github.com/sseyler0119/Python-Live-Project/blob/main/urls.py)
