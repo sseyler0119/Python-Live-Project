@@ -160,6 +160,18 @@ def scrape_desserts(request):
 
 ## Search For Recipes
 ![Search GIF](https://github.com/sseyler0119/Python-Live-Project/blob/main/img/APIdemo1.gif)
+- Create API search page template and register url
+- Create category_search function to connect to API and render query response to template
+    - Use GET request to get category selection from user through form on search page template
+    - Append category to url, before connecting to API endpoint
+    - Request API response
+    - Parse results using JSON
+    - Iterate through parsed data to extract desired data and append to results_list
+    - Bind results_list and form to context, send to rendered API search page template
+- Display all objects extracted on rendered template
+    - Create clickable links for each recipe that lead to details page
+- Add basic styling using Bootstrap and CSS
+
 ### Code
 - [Template](https://github.com/sseyler0119/Python-Live-Project/blob/main/templates/Desserts/desserts_category_search.html)
 - [Cooking Recipe API]( https://rapidapi.com/masterfahim-8ILF-zz7IG3/api/cooking-recipe2/)
