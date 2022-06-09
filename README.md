@@ -210,7 +210,7 @@ Over the course of this project, I increased my knowledge and gained new coding 
 
 Some of the new coding skills I developed during this project are:
 - Effectively using the Beautiful Soup library to parse data and navigate the website’s data structure for web-scraping
-- Utilizing API endpoints, Requests library, and JSON to 
+- Utilizing API endpoints, Requests library, and JSON 
 
 Some of the non-coding related skills that I developed are:
 - Using Agile and Scrum methodologies:
