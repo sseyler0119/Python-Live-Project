@@ -1,5 +1,5 @@
 # Python-Live-Project
-This repo is for my Python Live Project that I did as a student with The Tech Academy. Over the course of a two-week code sprint, I worked on a development team of other students where we were each tasked with creating a database-focused web app within the Django framework. For my app, I chose to create a recipe app that primarily tracked desserts.  
+This repo is for my Python Live Project that I did as a student with The Tech Academy. Over the course of a two-week code sprint, I worked on a development team where we were each tasked with creating a database-focused web app within the Django framework. For my app, I chose to create a recipe app that primarily tracked desserts.  
 
 I was assigned the task of creating a website that would allow a user to view all available recipes within a database and view the details of any specific recipe of their choosing.
 Additionally, the user should be able to create new recipes, edit existing recipes, and delete recipes in a database. I also implemented other features including a search page that searches by category using an API and displays the results to the user, and a recipe scraper page that scrapes content from a chosen recipe site using the Beautiful Soup library and then displays those results to the user.
